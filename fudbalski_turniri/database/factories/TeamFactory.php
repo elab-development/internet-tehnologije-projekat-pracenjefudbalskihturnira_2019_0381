@@ -17,7 +17,7 @@ class TeamFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => $this->faker->word(),
+            'name' => $this->faker->unique()->name(),
             'year' => $this->faker->numberBetween(1990, 2023),
         ];
     }
