@@ -1,4 +1,4 @@
-import Forma from "../components/Forma";
+import Forma from "./Forma";
 
 function Kontakt(){
     return <Forma/>
