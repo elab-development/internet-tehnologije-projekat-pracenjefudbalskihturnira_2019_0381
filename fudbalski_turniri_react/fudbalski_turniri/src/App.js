@@ -6,6 +6,7 @@ import About from './components/About';
 import Tournaments from './components/Tournaments';
 import Navbar from './components/Navbar';
 import { useState } from "react";
+import TournamentBracket from './components/TournamentBracket';
 
 const App = () => {
   return (
@@ -55,6 +56,7 @@ const AppContent = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/tournaments" element={<Tournaments allTournaments = {allTournaments} />} />
+        <Route path="/tournament-bracket" element={<TournamentBracket/>} />
       </Routes>
     </div>
   );

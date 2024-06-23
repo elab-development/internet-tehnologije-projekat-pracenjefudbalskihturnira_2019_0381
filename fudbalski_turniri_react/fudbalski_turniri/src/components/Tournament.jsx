@@ -9,7 +9,7 @@ function Tournament({Tournament_name, image, }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/TournamentsBracket');
+    navigate('/tournament-bracket');
   };
 
   function handleDescription() {
@@ -18,6 +18,7 @@ function Tournament({Tournament_name, image, }) {
 
   return (
     <div
+      onClick={handleClick}
       onMouseEnter={handleDescription}
       onMouseLeave={handleDescription}
       className={classes.TournamentFrame}
@@ -27,7 +28,7 @@ function Tournament({Tournament_name, image, }) {
       <img
           className={classes.tournamentImg}
           src={image}
-          onClick={handleClick}
+          alt="Click to view tournament bracket"
           
         />
       

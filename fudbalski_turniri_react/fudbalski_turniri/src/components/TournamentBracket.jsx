@@ -1,7 +1,7 @@
 import React from "react";
-import classes from "./TournamentsBracket.module.css";
+import classes from "./TournamentBracket.module.css";
 
-const FootballTournamentBracket = () => {
+const TournamentBracket = () => {
   return (
     <div className={classes.bracket}>
       {/* Round 1 */}
@@ -35,4 +35,4 @@ const FootballTournamentBracket = () => {
   );
 };
 
-export default FootballTournamentBracket;
+export default TournamentBracket;
