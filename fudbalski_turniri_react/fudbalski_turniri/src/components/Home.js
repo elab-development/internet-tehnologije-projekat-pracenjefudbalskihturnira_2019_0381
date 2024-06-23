@@ -9,6 +9,9 @@ const Home = () => {
         <h1>Dobrodošli na praćenje fudbalskih turnira</h1>
         <Link to="/tournaments" className="btn-primary">Pogledaj turnire</Link>
       </div>
+      <div className="gif-container">
+        <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNm80aTd5MG83c2Z5OGttYTRyYTBqbms5Mmxzb3NlNDRjYXhhZTNwYSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/L18cE2kcuo1TqzC8No/giphy.gif" alt="Football GIF" />
+      </div>
     </div>
   );
 };

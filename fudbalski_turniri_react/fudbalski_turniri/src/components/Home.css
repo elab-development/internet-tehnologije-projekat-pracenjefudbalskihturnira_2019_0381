@@ -1,5 +1,6 @@
 .home {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100vh;
@@ -45,5 +46,15 @@
   .btn-primary:hover {
     background-color: #1a5a8b;
     color: #fff;
+  }
+  
+  .gif-container {
+    margin-top: 20px;
+  }
+  
+  .gif-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
   }
   
