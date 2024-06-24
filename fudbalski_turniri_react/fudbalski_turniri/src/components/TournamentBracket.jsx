@@ -1,12 +1,15 @@
 import React from "react";
 import Teams from "./Teams";
 import classes from "./TournamentBracket.module.css";
+import {useSearchParams } from 'react-router-dom';
 
-const TournamentBracket = ({ teamsData }) => {
+const TournamentBracket = () => {
+  const [searchParams] = useSearchParams();
+  const name = searchParams.get('name');
   return (
     <div className={classes.tournamentBracket}>
-      <h1>Euro Football Cup</h1>
-      <Teams teamsData={teamsData} />
+      <h1 className={classes.title}>{name}</h1>
+      <Teams/>  
     </div>
   );
 };

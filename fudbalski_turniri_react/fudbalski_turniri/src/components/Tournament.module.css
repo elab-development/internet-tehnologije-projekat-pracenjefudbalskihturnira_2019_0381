@@ -1,75 +1,38 @@
-.TournamentFrame {
-    position: relative;
-    height: 25rem;
-    width: 25rem;
-    margin: 0 2rem 2rem 0;
-    border-radius: 27px;
-    background: #ffffff;
-  }
-  
-  .overlay {
-    height: 20rem;
-    width: 20rem;
-    background-color: black;
-    border-radius: 31px;
-    opacity: 0;
-    position: absolute;
-    transition: opacity 0.3s;
-  }
-  
-  .imgWrapper,
-  .descriptionWrapper {
-    position: absolute;
-    height: 20rem;
-    width: 20rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .tournamentImg {
-    position: absolute;
-    object-fit: contain;
-    width: 18rem;
-    height: 18rem;
-    transition: transform 0.3s;
-  }
-  
-  .description {
-    position: absolute;
-    text-align: center;
-    color: turquoise;
-    font-size: 2.2rem;
-    font-weight: 300;
-    line-height: 1.5;
-  }
-  
-  .bolderDescription {
-    color:#f3f3f3;
-    font-size: 3rem;
-    font-weight: 600;
-  }
-  
-  .show {
-    opacity: 1;
-    transition: opacity 0.6s 0.15s;
-  }
-  
-  .hide {
-    opacity: 0;
-    transition: opacity 0.6s;
-  }
-  
-  .tournamentFrame:hover .overlay {
-    opacity: 0.35;
-  }
-  
-  .tournamentFrame:hover{
-    transform: scale(1.1);
-  }
-  
-  
-  
- 
- 
-  
+.tournamentsContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.imgWrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+}
+
+.tournamentImg {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+
+.name {
+  position: absolute;
+  bottom: 10px; /* Adjust bottom spacing as needed */
+  left: 50%; /* Position at the horizontal center */
+  transform: translateX(-50%); /* Center the text horizontally */
+  background-color: rgba(81, 77, 139, 0.5);
+  padding: 5px 10px; /* Padding around the text */
+  text-align: center; /* Center align the text */
+  width: calc(100% - 20px); /* Adjust width as needed */
+  box-sizing: border-box; /* Include padding in the width */
+  z-index: 10; /* Ensure text is above the image */
+  color: white;
+}

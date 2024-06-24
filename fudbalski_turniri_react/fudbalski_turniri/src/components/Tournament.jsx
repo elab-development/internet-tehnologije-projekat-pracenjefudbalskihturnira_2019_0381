@@ -1,48 +1,24 @@
 import React from "react";
 import classes from "./Tournament.module.css";
-import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function Tournament({ Tournament_name, image }) {
-  const [descIsHidden, setDescIsHidden] = useState(true);
-
+function Tournament({ tournament, leagueId }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/tournament-bracket");
+    let path = `/tournament-bracket/${leagueId}/?name=${tournament}`;
+    navigate(path);
   };
 
-  function handleDescription() {
-    setDescIsHidden((prevState) => !prevState);
-  }
-
   return (
-    <div
-      onClick={handleClick}
-      onMouseEnter={handleDescription}
-      onMouseLeave={handleDescription}
-      className={classes.TournamentFrame}
-    >
-      <div className={classes.imgWrapper}>
+    <div className={classes.tournamentsContainer}>
+      <div onClick={handleClick} className={classes.imgWrapper}>
         <img
           className={classes.tournamentImg}
-          src={image}
-          alt="Click to view tournament bracket"
+          src="/football_icon.png"
+          alt={tournament}
         />
-      </div>
-
-      <div className={classes.overlay}></div>
-
-      <div
-        className={
-          descIsHidden
-            ? classes.descriptionWrapper + " " + classes.hide
-            : classes.descriptionWrapper + " " + classes.show
-        }
-      >
-        <p className={classes.description}>
-          <span className={classes.bolderDescription}>{Tournament_name}</span>
-        </p>
+        <p className={classes.name}>{tournament}</p>
       </div>
     </div>
   );
