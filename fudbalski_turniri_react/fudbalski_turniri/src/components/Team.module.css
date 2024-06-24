@@ -1,0 +1,39 @@
+.groupsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .group {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    width: calc(25% - 20px);
+    text-align: left;
+    background-color: #f8f8f8;
+    box-sizing: border-box;
+  }
+  
+  .group h2 {
+    color: #333;
+    text-align: center;
+  }
+  
+  .group ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .teamItem {
+    display: flex;
+    justify-content: space-between;
+    margin: 8px 0;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .teamItem:last-child {
+    border-bottom: none;
+  }

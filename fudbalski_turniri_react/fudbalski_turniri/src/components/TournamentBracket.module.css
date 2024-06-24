@@ -1,27 +1,40 @@
-.bracket {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .round {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-  }
-  
-  .match {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 300px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    margin-bottom: 10px;
-  }
-  
-  .team {
-    width: 100px;
-    text-align: center;
-  }
+.groups-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.group {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  width: calc(25% - 20px); /* Adjust width for 4 items per row, minus the gap */
+  text-align: left;
+  flex: 1 1 30%;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.group h2 {
+  color: #333;
+  text-align: center;
+}
+
+.group ul {
+  list-style: none;
+  padding: 0;
+}
+
+.group li {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.group li:last-child {
+  border-bottom: none;
+}
