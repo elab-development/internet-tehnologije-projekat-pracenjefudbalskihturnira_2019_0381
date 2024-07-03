@@ -51,9 +51,9 @@ const Teams = () => {
             {Results.map((team, index) => (
               <tr key={team.idStanding}>
                 <td>{team.intRank}</td>
-                <td>
+                <td className={classes.tdImg}>
                   <img
-                    src={team.strTeamBadge}
+                    src={team.strBadge}
                     alt={team.strTeam}
                     className={classes.teamLogo}
                   />

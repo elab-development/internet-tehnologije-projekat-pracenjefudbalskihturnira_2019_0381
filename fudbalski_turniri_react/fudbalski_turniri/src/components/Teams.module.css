@@ -34,3 +34,14 @@
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
+.teamLogo {
+  width: 30px;
+}
+
+.tdImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
