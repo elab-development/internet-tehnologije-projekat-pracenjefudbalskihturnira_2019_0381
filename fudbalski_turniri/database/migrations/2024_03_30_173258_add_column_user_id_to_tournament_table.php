@@ -27,5 +27,6 @@ return new class extends Migration
             $table->dropForeign('tournament_user_id_foreign');
             $table->dropColumn('user_id');
         });
+        
     }
 };

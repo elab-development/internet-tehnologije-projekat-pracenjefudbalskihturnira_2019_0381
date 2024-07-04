@@ -23,6 +23,8 @@ return new class extends Migration
     {
         Schema::table('teams', function (Blueprint $table) {
             $table->dropUnique('team_name_unique');
+
         });
+        
     }
 };

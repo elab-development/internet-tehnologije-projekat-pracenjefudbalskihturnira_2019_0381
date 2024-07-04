@@ -14,7 +14,9 @@ return new class extends Migration
         Schema::create('tournaments', function (Blueprint $table) {
             $table->id();
             $table->string("Tournament_name",100);
+            $table->integer("year");
             $table->timestamps();
+            
         });
     }
 

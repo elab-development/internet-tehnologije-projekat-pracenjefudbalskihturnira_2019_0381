@@ -11,12 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('teams', function (Blueprint $table) {
-            $table->id();
-            $table->string('name',100);
-            $table->integer('year');
-            $table->string('league',100);
-            $table->timestamps();
+        Schema::table('teams', function (Blueprint $table) {
+            $table->string('coach', 100)->nullable();
         });
     }
 
@@ -25,6 +21,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('teams');
+        Schema::table('teams', function (Blueprint $table) {
+            $table->dropColumn('coach'); 
+
+        });
     }
 };
