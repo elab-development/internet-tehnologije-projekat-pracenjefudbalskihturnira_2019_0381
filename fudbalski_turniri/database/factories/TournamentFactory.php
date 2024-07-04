@@ -20,6 +20,7 @@ class TournamentFactory extends Factory
         return [
             'Tournament_name' => $this->faker->word(),
             'user_id' => $this->faker->randomElement(User::pluck('id')),
+            'year' => $this->faker->numberBetween(2000, 2024),
         ];
     }
 }
