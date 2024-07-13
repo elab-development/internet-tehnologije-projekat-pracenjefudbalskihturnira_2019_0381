@@ -16,10 +16,6 @@ class Tournament extends Model
         return $this->belongsToMany(Team::class);
     }
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
     
 }
 

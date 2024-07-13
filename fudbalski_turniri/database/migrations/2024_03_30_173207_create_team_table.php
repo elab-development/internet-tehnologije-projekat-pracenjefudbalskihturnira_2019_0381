@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name',100);
             $table->integer('year');
-            $table->string('league',100);
             $table->timestamps();
         });
     }

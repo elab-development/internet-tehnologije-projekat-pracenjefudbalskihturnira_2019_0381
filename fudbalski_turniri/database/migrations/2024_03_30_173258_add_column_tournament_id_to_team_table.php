@@ -11,8 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table('tournaments', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained()
+        Schema::table('teams', function (Blueprint $table) {
+            $table->foreignId('tournament_id')->constrained()
                                         ->onUpdate('cascade')
                                         ->onDelete('cascade');
         });
@@ -23,9 +23,9 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table('tournaments', function (Blueprint $table) {
-            $table->dropForeign('tournament_user_id_foreign');
-            $table->dropColumn('user_id');
+        Schema::table('teams', function (Blueprint $table) {
+            $table->dropForeign('team_tournament_id_foreign');
+            $table->dropColumn('tournament_id');
         });
         
     }
