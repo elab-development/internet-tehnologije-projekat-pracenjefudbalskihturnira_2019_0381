@@ -17,7 +17,7 @@ class TournamentResource extends JsonResource
         return [
             'id' => $this->id,
             'Tournament_name' => $this->Tournament_name,
-            'user' => new UserResource($this->user),
+            'year' => $this->year,
         ];
     }
 }

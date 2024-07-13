@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\Tournament;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
@@ -19,9 +20,8 @@ class TeamFactory extends Factory
         return [
             'name' => $this->faker->unique()->name(),
             'year' => $this->faker->numberBetween(1990, 2023),
-            'league' => $this->faker->randomElement(['Premier League', 'La Liga', 'Serie A', 'Bundesliga', 'Ligue 1']),
             'coach' => $this->faker->name(),
-
+            'tournament_id' => $this->faker->randomElement(Tournament::pluck('id')),
 
         ];
     }

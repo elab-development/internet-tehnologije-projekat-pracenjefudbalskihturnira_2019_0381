@@ -35,8 +35,8 @@ class UserController extends Controller
 
     public function showAllTournaments($user_id)
     {   
-        $tournaments = Tournament::where('user_id', $user_id)->get();
-        return $tournaments;
+        // $tournaments = Tournament::where('user_id', $user_id)->get();
+        // return $tournaments;
     }
 
     /**

@@ -28,8 +28,8 @@ class DatabaseSeeder extends Seeder
         Schema::enableForeignKeyConstraints();
 
        
-        User::factory(10)->create();
+        User::factory(5)->create();
         Tournament::factory(4)->create();
-        Team::factory(12)->create();
+        Team::factory(24)->create();
     }
 }
