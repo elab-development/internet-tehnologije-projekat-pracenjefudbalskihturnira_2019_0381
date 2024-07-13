@@ -9,7 +9,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 class Tournament extends Model
 {
     use HasFactory;
-    protected $fillable = [ 'Tournament_name', 'user_id', 'year'];
+    protected $fillable = [ 'Tournament_name', 'year'];
 
     public function teams(): BelongsToMany
     {
