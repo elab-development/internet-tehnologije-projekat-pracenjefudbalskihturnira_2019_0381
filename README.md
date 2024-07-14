@@ -1,1 +1,16 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/1IMeAlJr)
+prvo pokrenuti laravel projekat koji se nalazi u folderu fudbalski_turniri
+otvoriti termianl i poslati sledece komande istim redom
+
+php artisan migrate:fresh
+php artisan db:seed
+php artisan serve
+
+sa ovim smo omogucili da nam laravel funkcionise tj. generisali smo tabelu sa migracijama i onda smo generisali podatke sa ovim drugim delom
+
+sada mozemo da pristupamo api rutama preko postman-a i da ih koristima u nasem react-u
+
+react startamo sa
+
+npm install
+
+npm start

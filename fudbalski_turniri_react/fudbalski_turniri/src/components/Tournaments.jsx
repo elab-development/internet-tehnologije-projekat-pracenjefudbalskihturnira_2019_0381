@@ -8,13 +8,12 @@ const Tournaments = ({ allTournaments }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredTournaments, setFilteredTournaments] = useState([]);
 
-
   useEffect(() => {
     const filtered = allTournaments.filter((tournament) =>
       tournament.name.toLowerCase().includes(searchQuery.toLowerCase())
     );
     setFilteredTournaments(filtered);
-    setCurrentPage(1); 
+    setCurrentPage(1);
   }, [allTournaments, searchQuery]);
 
   const indexOfLastItem = currentPage * itemsPerPage;
