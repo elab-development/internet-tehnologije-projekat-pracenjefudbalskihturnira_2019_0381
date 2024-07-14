@@ -19,7 +19,7 @@ class TournamentFactory extends Factory
     {
         return [
             'Tournament_name' => $this->faker->word(),
-            'year' => $this->faker->numberBetween(2000, 2024),
+            'year' => $this->faker->numberBetween(2024, 2030),
         ];
     }
 }

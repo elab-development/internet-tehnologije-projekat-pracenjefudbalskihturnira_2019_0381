@@ -18,6 +18,8 @@ Route::get('/users/{id}', [UserController::class, 'show']);
 
 Route::get('/tournaments/{id}/teams', [TournamentController::class, 'showAllTeams']);
 
+Route::get('/tournaments', [TournamentController::class, 'index']);
+
 Route::get('/tournaments/{id}', [TournamentController::class, 'show']);
 
 Route::post('/register', [AuthController::class, 'register']);

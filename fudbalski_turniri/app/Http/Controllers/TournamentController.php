@@ -16,7 +16,7 @@ class TournamentController extends Controller
      */
     public function index()
     {
-        //
+        return Tournament::all();
     }
 
     /**
@@ -122,4 +122,5 @@ class TournamentController extends Controller
         $teams = Team::where('tournament_id', $tournament_id)->get()->makeHidden(['created_at', 'updated_at']);
         return $teams;
     }
+
 }
