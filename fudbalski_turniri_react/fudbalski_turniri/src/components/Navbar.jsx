@@ -27,12 +27,12 @@ const Navbar = () => {
     <div className="navbar">
       <nav>
         <Link to="/" className="brand">
-          Početna
+          Home
         </Link>
-        <Link to="/newTournament">Novi turniri</Link>
-        <Link to="/tournaments">Turniri</Link>
+        <Link to="/newTournament">New tournaments</Link>
+        <Link to="/tournaments">Tournaments</Link>
         <Link to="/form">Contact</Link>
-        <Link to="/about">O nama</Link>
+        <Link to="/about">About</Link>
         {isLoggedIn ? (
           <>
             <button onClick={handleLogout} className="logout">

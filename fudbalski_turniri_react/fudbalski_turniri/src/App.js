@@ -16,7 +16,7 @@ import NewTeam from "./components/NewTeams";
 import Forma from "./components/Forma";
 
 const App = () => {
-  const [allTournaments, setAllTournaments] = useState([]); // Initialize with null
+  const [allTournaments, setAllTournaments] = useState([]);
 
   useEffect(() => {
     const fetchLeagues = async () => {
