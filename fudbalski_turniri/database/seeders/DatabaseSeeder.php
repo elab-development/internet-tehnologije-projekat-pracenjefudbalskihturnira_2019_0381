@@ -31,5 +31,27 @@ class DatabaseSeeder extends Seeder
         User::factory(5)->create();
         Tournament::factory(4)->create();
         Team::factory(24)->create();
+
+
+        $this->createRequiredUsers();
+
+    }
+
+    private function createRequiredUsers(): void
+    {
+        
+        if (!User::where('role', 'user')->exists()) {
+            User::factory()->create(['role' => 'user']);
+        }
+
+        
+        if (!User::where('role', 'admin')->exists()) {
+            User::factory()->create(['role' => 'admin']);
+        }
+
+        
+        if (!User::where('role', 'privilegedUser')->exists()) {
+            User::factory()->create(['role' => 'privilegedUser']);
+        }
     }
 }

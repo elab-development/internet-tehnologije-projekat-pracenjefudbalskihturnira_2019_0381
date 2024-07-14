@@ -17,6 +17,7 @@ class AuthController extends Controller
             'username' => 'required|string|max:100',
             'email' => 'required|string|max:150|email|unique:users',
             'password' => 'required|string|max:50|min:8',
+            'role' => 'string|in:user,admin,privilegedUser',
         ]);
 
         if($validator->fails()){
@@ -27,6 +28,7 @@ class AuthController extends Controller
             'username' => $request->username,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => $request->role ?? 'user',
         ]);
 
         
@@ -52,6 +54,7 @@ class AuthController extends Controller
 
         return response()->json([
             'message' => 'Hello, ' . $user->name . ' welcome to the home page!',
+            'role' => $user->role,
             'access_token' => $token,
             'token_type' => 'Bearer',
         ]);
