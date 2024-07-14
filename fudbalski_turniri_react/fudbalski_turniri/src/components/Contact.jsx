@@ -1,7 +1,6 @@
 import Forma from "./Forma";
 
-function Kontakt(){
-    return <Forma/>
-
+function Kontakt() {
+  return <Forma />;
 }
 export default Kontakt;
