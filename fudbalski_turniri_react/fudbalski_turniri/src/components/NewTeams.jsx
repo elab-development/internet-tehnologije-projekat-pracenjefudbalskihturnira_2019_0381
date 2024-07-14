@@ -13,7 +13,7 @@ const NewTeams = () => {
   const [isAddModalOpen, setIsAddModalOpen] = useState(false);
   const [selectedTournamentId, setSelectedTournamentId] = useState(null);
   const location = useLocation();
-  const { isLoggedIn } = useContext(UserContext);
+  const { isLoggedIn, role } = useContext(UserContext);
 
   useEffect(() => {
     const { id: tournamentId } = location.state || {};
@@ -192,17 +192,30 @@ const NewTeams = () => {
             </button>
             <button
               onClick={openEditModal}
-              disabled={!selectedTeam || !isLoggedIn}
+              disabled={
+                !selectedTeam ||
+                !isLoggedIn ||
+                role === "privilegedUser" ||
+                role === "user"
+              }
             >
               Edit
             </button>
             <button
               onClick={handleDelete}
-              disabled={!selectedTeam || !isLoggedIn}
+              disabled={
+                !selectedTeam ||
+                !isLoggedIn ||
+                role === "privilegedUser" ||
+                role === "user"
+              }
             >
               Delete
             </button>
-            <button onClick={handleAdd} disabled={selectedTeam || !isLoggedIn}>
+            <button
+              onClick={handleAdd}
+              disabled={selectedTeam || !isLoggedIn || role === "user"}
+            >
               Add
             </button>
           </div>

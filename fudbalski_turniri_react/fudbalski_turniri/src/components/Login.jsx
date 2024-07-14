@@ -5,7 +5,7 @@ import MessageModal from "./MessageModal";
 import UserContext from "./Context/UserContext";
 
 const Login = () => {
-  const { isLoggedIn, setLoggedIn } = useContext(UserContext);
+  const { setLoggedIn, setRole } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(null);
@@ -15,10 +15,12 @@ const Login = () => {
 
     try {
       const response = await authService.login(email, password);
-      const { access_token } = response;
+      const { access_token, role } = response;
 
       localStorage.setItem("access_token", access_token);
+      localStorage.setItem("role", role);
       setLoggedIn(true);
+      setRole(role);
       console.log("Logged in successfully:", response);
       setMessage("Login successful!");
       setEmail("");

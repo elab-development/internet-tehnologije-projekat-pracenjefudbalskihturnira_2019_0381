@@ -4,13 +4,15 @@ import UserContext from "./Context/UserContext";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const { isLoggedIn, setLoggedIn } = useContext(UserContext);
+  const { isLoggedIn, setLoggedIn, setRole } = useContext(UserContext);
 
   const navigate = useNavigate();
 
   const handleLogout = () => {
     localStorage.removeItem("access_token");
+    localStorage.removeItem("role");
     setLoggedIn(false);
+    setRole("");
     navigate("/login");
   };
 

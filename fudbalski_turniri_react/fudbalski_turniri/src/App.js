@@ -60,7 +60,7 @@ const App = () => {
             path="/tournament-bracket/:leagueId"
             element={<TournamentBracket />}
           />
-          <Route path="/form" element={<Forma/>}/>
+          <Route path="/form" element={<Forma />} />
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/messageModal" element={<MessageModal />} />

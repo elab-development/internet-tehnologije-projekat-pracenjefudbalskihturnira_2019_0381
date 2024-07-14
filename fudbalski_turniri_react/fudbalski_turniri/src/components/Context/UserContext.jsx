@@ -4,6 +4,7 @@ const UserContext = createContext();
 
 export function UserContextProvider({ children }) {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [role, setRole] = useState(localStorage.getItem("role") || "");
 
   function setLoggedIn(value) {
     setIsLoggedIn(value);
@@ -12,6 +13,8 @@ export function UserContextProvider({ children }) {
   const context = {
     isLoggedIn: isLoggedIn,
     setLoggedIn: setLoggedIn,
+    role: role,
+    setRole: setRole,
   };
 
   return (

@@ -1,6 +1,7 @@
 .tableContainer {
   overflow-x: auto;
   margin-top: 20px;
+  text-align: center;
 }
 
 .standingsTable {
@@ -44,4 +45,27 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+.exportButton {
+  background-color: #1900ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.exportButton:hover {
+  background-color: #b3a7f7;
+}
+
+.exportButton:active {
+  background-color: #1900ff;
 }
