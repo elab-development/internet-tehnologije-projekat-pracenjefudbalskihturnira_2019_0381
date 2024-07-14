@@ -5,7 +5,7 @@ import MessageModal from "./MessageModal";
 import UserContext from "./Context/UserContext";
 
 const Login = () => {
-  const {isLoggedIn, setLoggedIn } = useContext(UserContext);
+  const { isLoggedIn, setLoggedIn } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(null);

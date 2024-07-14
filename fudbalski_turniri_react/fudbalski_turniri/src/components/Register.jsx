@@ -14,6 +14,16 @@ const Register = () => {
     e.preventDefault();
 
     try {
+      if (username.length < 5) {
+        setMessage("Username must be at least 5 characters long.");
+        return;
+      }
+
+      if (password.length < 8) {
+        setMessage("Password must be at least 8 characters long.");
+        return;
+      }
+
       const response = await authService.register(username, email, password);
 
       console.log("Registered successfully:", response);
