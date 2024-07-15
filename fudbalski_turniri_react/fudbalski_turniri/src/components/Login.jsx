@@ -3,12 +3,14 @@ import authService from "./AuthService";
 import classes from "./AuthForm.module.css";
 import MessageModal from "./MessageModal";
 import UserContext from "./Context/UserContext";
+import { useNavigate, Link } from "react-router-dom";
 
 const Login = () => {
   const { setLoggedIn, setRole } = useContext(UserContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(null);
+  const navigate = useNavigate();
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -25,6 +27,7 @@ const Login = () => {
       setMessage("Login successful!");
       setEmail("");
       setPassword("");
+      navigate("/tournaments");
     } catch (error) {
       console.error("Login failed:", error);
       setMessage("Login failed. Please check your credentials.");
@@ -65,6 +68,9 @@ const Login = () => {
         >
           Register
         </button>
+        <div className={classes.resetPasswordLink}>
+          <Link to="/reset-password">Can't remember password?</Link>
+        </div>
       </form>
       {message && <MessageModal message={message} onClose={closeModal} />}
     </div>

@@ -14,6 +14,7 @@ import { UserContextProvider } from "./components/Context/UserContext";
 import NewTournaments from "./components/NewTournaments";
 import NewTeam from "./components/NewTeams";
 import Forma from "./components/Forma";
+import ResetPassword from "./components/ResetPassword";
 
 const App = () => {
   const [allTournaments, setAllTournaments] = useState([]);
@@ -64,6 +65,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/messageModal" element={<MessageModal />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
         </Routes>
       </div>
     </UserContextProvider>

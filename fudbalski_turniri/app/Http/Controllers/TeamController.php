@@ -90,7 +90,7 @@ class TeamController extends Controller
      */
     public function destroy($team_id)
     {
-        $teamIds = array_values((array) Team::pluck('id '))[0];
+        $teamIds = array_values((array) Team::pluck('id'))[0];
 
         if(!in_array($team_id, $teamIds)){
             return response()->json([

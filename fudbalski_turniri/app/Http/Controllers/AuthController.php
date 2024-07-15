@@ -67,4 +67,28 @@ class AuthController extends Controller
             'message' => 'You have successfully logged out',
         ]);
     }
+
+
+    public function resetPassword(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            'email' => 'required|string|email',
+            'newPassword' => 'required|string|max:50|min:8',
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json($validator->errors());
+        }
+
+        $user = User::where('email', $request->email)->first();
+        
+        if (!$user) {
+            return response()->json(['message' => 'User not found'], 404);
+        }
+
+        $user->password = Hash::make($request->newPassword);
+        $user->save();
+
+        return response()->json(['message' => 'Password reset successfully'], 200);
+    }
 }
